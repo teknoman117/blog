@@ -1,0 +1,31 @@
+base_url = "https://nrlewis.dev/"
+title = "A Hobbyist Hacker's Blog"
+description = ""
+theme = "simple-dev-blog"
+
+taxonomies = [ { name = "tags" } ]
+
+[markdown]
+highlight_code = true
+highlight_theme = "visual-studio-dark"
+
+[extra]
+nav = [
+  { name = "About", path = "/about/" },
+  { name = "Blog", path = "/blog/" },
+  { name = "GitHub", path = "https://github.com/teknoman117" },
+  #{ name = "Reddit", path = "https://reddit.com/u/teknoman117" },
+  { name = "Twitter", path = "https://twitter.com/teknoman117" },
+  { name = "YouTube", path = "https://youtube.com/@teknoman117" },
+  { name = "LinkedIn", path = "https://linkedin.com/in/teknoman117" },
+]
+
+author = "Nathan Lewis"
+
+footer_about = """
+A Hobbyist Hacker's Blog
+"""
+
+footer_page = """
+This work is licensed under CC BY-SA 4.0
+"""
