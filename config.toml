@@ -11,6 +11,7 @@ highlight_theme = "visual-studio-dark"
 
 [extra]
 nav = [
+  { name = "[Webring Prev]", path = "https://ringdt.rapid.workers.dev/prev?from=https://nrlewis.dev" },
   { name = "About", path = "/about/" },
   { name = "Blog", path = "/blog/" },
   { name = "GitHub", path = "https://github.com/teknoman117" },
@@ -18,6 +19,7 @@ nav = [
   { name = "Twitter", path = "https://twitter.com/teknoman117" },
   { name = "YouTube", path = "https://youtube.com/@teknoman117" },
   { name = "LinkedIn", path = "https://linkedin.com/in/teknoman117" },
+  { name = "[Webring Next]", path = "https://ringdt.rapid.workers.dev/next?from=https://nrlewis.dev" },
 ]
 
 author = "Nathan Lewis"
