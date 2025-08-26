@@ -1,33 +1,80 @@
-base_url = "https://nrlewis.dev/"
-title = "A Hobbyist Hacker's Blog"
-description = ""
-theme = "simple-dev-blog"
-
-taxonomies = [ { name = "tags" } ]
+base_url = "https://nrlewis.dev"
+compile_sass = true
+theme = "papaya"
 
 [markdown]
+# When set to "true", all code blocks are highlighted.
 highlight_code = true
-highlight_theme = "visual-studio-dark"
 
-[extra]
-nav = [
-  { name = "About", path = "/about/" },
-  { name = "Blog", path = "/blog/" },
-  { name = "GitHub", path = "https://github.com/teknoman117" },
-  #{ name = "Reddit", path = "https://reddit.com/u/teknoman117" },
-  { name = "Twitter", path = "https://twitter.com/teknoman117" },
-  { name = "YouTube", path = "https://youtube.com/@teknoman117" },
-  { name = "LinkedIn", path = "https://linkedin.com/in/teknoman117" },
-  { name = "[Prev]", path = "https://ringdt.rapid.workers.dev/prev?from=https://nrlewis.dev" },
-  { name = "[Next]", path = "https://ringdt.rapid.workers.dev/next?from=https://nrlewis.dev" },
+[languages]
+
+[languages.en]
+title = "Nathan Lewis"
+description = "A software engineer rediscovering the things that got me into computing in the first place"
+build_search_index = true
+
+# The taxonomies to be rendered for the site and their configuration of the default languages
+taxonomies = [
+    { name = "tags", feed = true },
+    { name = "categories", feed = true },
 ]
 
-author = "Nathan Lewis"
+[languages.en.translations]
+projects = "Projects"
+blog = "Blog"
+about = "About"
+recent_projects = "Recent Projects"
+more_projects = "More Projects"
+recent_blog_posts = "Recent Blog Posts"
+more_blog_posts = "More blog posts"
+tag = "Tag"
+tags = "Tags"
+to_all_tags = "To all tags"
+category = "Category"
+categories = "Categories"
+to_all_categories = "To all categories"
+view_by = "View by"
+other = "Other"
+minute = "min"
+prev_page = "To newer posts"
+next_page = "To older posts"
+# Customize your post date format. See: https://tera.netlify.app/docs/#date
+date_format = "%B %e, %Y"
 
-footer_about = """
-A Hobbyist Hacker's Blog
-"""
+[extra]
+env = "ZOLA_ENV"
 
-footer_page = """
-This work is licensed under CC BY-SA 4.0
-"""
+color_mode = "light"
+
+menu_items = [
+    { name = "projects", url = "$BASE_URL/projects", show_recent = true, recent_items = 3, recent_trans_key = "recent_projects", more_trans_key = "more_projects" },
+    { name = "blog", url = "$BASE_URL/blog", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
+    # tag is not a zola section, it's just a link.
+    { name = "tags", url = "$BASE_URL/tags" },
+    { name = "about", url = "$BASE_URL/about", show_recent = false },
+]
+
+[extra.images]
+max_width = 2500
+
+[extra.ogp]
+locale = "en_US"
+first_name = "Nathan"
+last_name = "Lewis"
+gender = "male"
+username = "teknoman117"
+
+# Footer social links; full options listed in macros/social.html
+[extra.social]
+github = "teknoman117"
+linkedin = "teknoman117"
+twitter = "teknoman117"
+other = [
+    { name = "YouTube", font_awesome = "fa-brands fa-youtube", url = "https://youtube.com/@teknoman117" }, 
+    { name = "Webring-Previous", font_awesome = "fa-solid fa-arrow-left-long", url = "https://ringdt.rapid.workers.dev/prev?from=https://nrlewis.dev" },
+    { name = "Webring-Next", font_awesome = "fa-solid fa-arrow-right-long", url = "https://ringdt.rapid.workers.dev/next?from=https://nrlewis.dev" }
+]
+
+# CDN links
+[extra.cdn]
+font_awesome = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"

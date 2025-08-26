@@ -1,3 +1,6 @@
 [submodule "themes/simple-dev-blog"]
 	path = themes/simple-dev-blog
 	url = https://github.com/bennetthardwick/simple-dev-blog-zola-starter
+[submodule "themes/papaya"]
+	path = themes/papaya
+	url = https://github.com/justint/papaya.git

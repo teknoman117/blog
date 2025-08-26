@@ -11,7 +11,7 @@ For simplicity’s sake, I’m going to assume you have an ARM cross compiler in
 We need to setup some boilerplate code at first.
 
 ```c
-#include
+#include <linux/module.h>
 #include <linux/printk.h>
 #include <linux/types.h>
  

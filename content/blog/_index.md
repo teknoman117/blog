@@ -1,7 +1,10 @@
 +++
-template = "blog.html"
-page_template = "blog-post.html"
-sort_by = "date"
-+++
+title = "Blog"
 
-## A Hobbyist Hacker's Blog
+sort_by = "date"
+paginate_by = 10
+render = true
+template = "blog.html"
+
+insert_anchor_links = "right"
++++
