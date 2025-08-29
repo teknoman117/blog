@@ -10,7 +10,7 @@ highlight_code = true
 
 [languages.en]
 title = "Nathan Lewis"
-description = "A software engineer rediscovering the things that got me into computing in the first place"
+description = "Rediscovering the things that got me into computing, one project at a time"
 build_search_index = true
 
 # The taxonomies to be rendered for the site and their configuration of the default languages
@@ -44,10 +44,10 @@ date_format = "%B %e, %Y"
 [extra]
 env = "ZOLA_ENV"
 
-color_mode = "light"
+color_mode = "auto"
 
 menu_items = [
-    { name = "projects", url = "$BASE_URL/projects", show_recent = true, recent_items = 3, recent_trans_key = "recent_projects", more_trans_key = "more_projects" },
+    # { name = "projects", url = "$BASE_URL/projects", show_recent = true, recent_items = 3, recent_trans_key = "recent_projects", more_trans_key = "more_projects" },
     { name = "blog", url = "$BASE_URL/blog", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
     # tag is not a zola section, it's just a link.
     { name = "tags", url = "$BASE_URL/tags" },
@@ -70,7 +70,7 @@ github = "teknoman117"
 linkedin = "teknoman117"
 twitter = "teknoman117"
 other = [
-    { name = "YouTube", font_awesome = "fa-brands fa-youtube", url = "https://youtube.com/@teknoman117" }, 
+    { name = "YouTube", font_awesome = "fa-brands fa-youtube", url = "https://youtube.com/@teknoman117" },
     { name = "Webring-Previous", font_awesome = "fa-solid fa-arrow-left-long", url = "https://ringdt.rapid.workers.dev/prev?from=https://nrlewis.dev" },
     { name = "Webring-Next", font_awesome = "fa-solid fa-arrow-right-long", url = "https://ringdt.rapid.workers.dev/next?from=https://nrlewis.dev" }
 ]
