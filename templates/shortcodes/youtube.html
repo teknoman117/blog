@@ -1,0 +1,59 @@
+{# {{ youtube_centered(id="", title="", class="", caption="", extended_width_pct=1.3) }} #}
+{# container_width = (pixel size, px) * (.container's max-width) #}
+{% set container_width = 16 * 42 %}
+{# figure_width = container_width - (figure margin_blocks) #}
+{% set figure_width = container_width - (40 * 2) %}
+
+{% if extended_width_pct %}
+  {% if extended_width_pct == -1 %}
+    {# adjust extended width to container width #}
+    {% set extended_width_pct = 0.042 %}
+  {% endif %}
+  {% set max_width = config.extra.images.max_width - figure_width %}
+  {% set extended_width = (extended_width_pct * max_width + figure_width) | round | int %}
+  {% if extended_width > config.extra.images.max_width %}
+    {% set extended_width = config.extra.images.max_width %}
+  {% endif %}
+  {% set video_width = extended_width %}
+{% else %}
+  {% set video_width = figure_width %}
+{% endif %}
+
+<figure {% if extended_width_pct %}class="extended-figure"{% endif %}>
+  <div class="youtube-container" style="max-width: {{ video_width }}px; margin: 0 auto;">
+    <div class="youtube-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/{{ id }}"
+        {% if title %}title="{{ title }}"{% endif %}
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        {% if class %}class="{{ class }}"{% endif %}>
+      </iframe>
+    </div>
+  </div>
+  {% if caption %}<figcaption>{{ caption | safe }}</figcaption>{% endif %}
+</figure>
+
+<style>
+    .youtube-container {
+        width: 100%;
+    }
+
+    .youtube-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+    }
+
+    .youtube-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px; /* Match theme's image border radius */
+    }
+</style>
