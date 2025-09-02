@@ -6,7 +6,7 @@ template = "about.html"
 
 <img src="/about/me.jpg" alt="A photo of me" class="bordered me-pic" align="right" style="margin-left: 1em; border-radius: 50%">
 
-I'm <b>Nathan</b>, a Senior Software Engineer in the Video Game Industry. I work on game streaming systems, primarily on the video pipeline, along the hardware and software that powers the high speed cloud storage systems that feed game content into the streaming servers.
+I'm <b>Nathan</b>, a Senior Software Engineer in the Video Game Industry. I work on game streaming systems, primarily on the video pipeline and the hardware/software that powers the high speed cloud storage systems that feed game content to the streaming servers.
 
 You might know of me through:
 - [Kopernicus](https://github.com/Kopernicus/), my Kerbal Space Program mod
@@ -26,7 +26,7 @@ That same year my parents gave me my first computer and a LEGO Mindstorms Roboti
 
 One of the things we forget is just how phenomenal the homebrew community surrounding LEGO Mindstorms was. LEGO envisioned an educational tool that you'd program using a simple block based programming environment, but some determined people took it to the next level - we had everything from a [C/C++ toolchain (BrickOS)](https://brickos.sourceforge.net/) to a [micro Java VM (LeJOS)](https://lejos.sourceforge.io/rcx.php) that even supported multithreading.
 
-Eventually I graduated to "real" microcontrollers. Eddy Wright, a very kind member of my childhood community robotics club ([ChiBots](https://www.robotroom.com/ChiBots/about.html)), gave me one of his prototype carrier boards for an ATmega8. All of his tutorials were based around [BASCOM-AVR](https://www.mcselec.com/index.php?id=14&option=com_content&task=view), a BASIC development environment for AVR, with a feeling not entirely unlike Visual Basic. These were the days before Arduino after all.
+Eventually I graduated to "real" microcontrollers - a very kind member of my childhood community robotics club ([ChiBots](https://www.robotroom.com/ChiBots/about.html)) gave me one of his prototype carrier boards for an ATmega8. All of his tutorials were based around [BASCOM-AVR](https://www.mcselec.com/index.php?id=14&option=com_content&task=view), a BASIC development environment for AVR, with a feeling not entirely unlike Visual Basic. These were the days before Arduino after all.
 
 However, the free version BASCOM-AVR had a 4K codesize limit - a limit of half the memory the ATmega8 had. I asked my dad for $80 for the paid version, but when he saw that [WinAVR](https://winavr.sourceforge.net/) was free/open-source, he told me that I should learn C instead. In terms of my development, I think that might go down as the best $80 he never spent on me.
 
