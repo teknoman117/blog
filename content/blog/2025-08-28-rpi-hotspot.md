@@ -9,7 +9,7 @@ tags = ["raspberry pi"]
 ## Install Dependencies
 
 ```bash
-# sudo apt install dnsmasq hostapd iw
+sudo apt install dnsmasq hostapd iw
 ```
 
 ## Configure Upstream WiFi Networks
@@ -36,7 +36,7 @@ network:
 ```
 
 ```bash
-# sudo netplan apply
+sudo netplan apply
 ```
 
 ### Option 2 - NetworkManager (Ubuntu Desktop 24.04)
@@ -92,8 +92,8 @@ rsn_pairwise=CCMP
 ```
 
 ```bash
-# sudo systemctl enable wifi-ap-interface@ap0.service
-# sudo systemctl enable hostapd.service
+sudo systemctl enable wifi-ap-interface@ap0.service
+sudo systemctl enable hostapd.service
 ```
 
 ### Set up a network bridge device to host the downstream DHCP and DNS server
@@ -129,7 +129,7 @@ cache-size=300
 ```
 
 ```bash
-# sudo systemctl enable dnsmasq.service
+sudo systemctl enable dnsmasq.service
 ```
 
 ### Add the access point and ethernet port to the network bridge
@@ -183,6 +183,6 @@ managed=0
 ```
 
 ```bash
-# # On Ubuntu Desktop, systemd-networkd is disabled by default
-# sudo systemctl enable systemd-networkd
+# On Ubuntu Desktop, systemd-networkd is disabled by default
+sudo systemctl enable systemd-networkd
 ```

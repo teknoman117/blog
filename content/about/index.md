@@ -4,7 +4,7 @@ render = true
 template = "about.html"
 +++
 
-<img src="/about/me.jpg" alt="A photo of me" class="bordered me-pic" align="right" style="margin-left: 1em; border-radius: 50%">
+<img src="/about/me.jpg" alt="A photo of me" class="bordered me-pic" align="right" style="margin-left: 1em; border-radius: 50%; max-width: 33%">
 
 I'm <b>Nathan</b>, a Senior Software Engineer in the Video Game Industry. I work on game streaming systems, primarily on the video pipeline and the hardware/software that powers the high speed cloud storage systems that feed game content to the streaming servers.
 
