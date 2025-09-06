@@ -71,7 +71,7 @@ Use the `wpa_passphrase` command to generate the pre-shared key (PSK) for the ne
 wpa_passphrase "<enter your ssid>"
 ```
 
-Create a file called `/etc/hostapd/hostapd.conf` with the following contents, replacing `<enter your ssid>` with the same SSID you used with `wpa_passphrase`.
+Create a file called `/etc/hostapd/hostapd.conf` with the following contents, replacing `<enter your ssid>` with the same SSID you used with `wpa_passphrase` and `<enter your psk>` with the PSK it generated.
 
 ```ini
 # /etc/hostapd/hostapd.conf
