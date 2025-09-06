@@ -14,7 +14,7 @@ A fairly common solution I've noticed is to build a [so-called "travel router"](
 
 If you've spent any time with the ESP32, you may have bumped into a mode called "AP+STA" or "Access Point plus Station". Conceptually, this means a device _both_ connects to a wifi network as a client (station) _and_ serves a network for other devices to connect to (access point), but when talking about "AP+STA", this typically refers to being able to do this with a single radio. It's commonly used to host configuration portals on IoT devices so that a user can configure the upstream network connection without needing to physically interact with the device.
 
-As it turns out, the wifi chipset in the Raspberry Pi 4 and 5 (the CYW43455) is capable of operating in "AP+STA" mode with some caveats - the caveat being that it can't operate in both the 2.4 GHz and 5 GHz bands simultaenously. (e.g. if the upstream network is 5 GHz, the downstream network must also be 5 GHz)
+As it turns out, the wifi chipset in the Raspberry Pi 4 and 5 (the CYW43455) is capable of operating in "AP+STA" mode with some caveats - the caveat being that it can't operate in both the 2.4 GHz and 5 GHz bands simultaneously. (e.g. if the upstream network is 5 GHz, the downstream network must also be 5 GHz)
 
 The 5 GHz bandwidth on the Pi 5 is actually quite remarkable, I was able to achieve nearly 300 megabit between my laptop and the Pi when in the same room.
 
@@ -217,6 +217,8 @@ managed=0
 ```
 
 ### Create a network bridge for downstream network via `nmcli`
+
+Run the following `nmcli` commands to create the network bridge, add `eth0`, and set up NAT.
 
 ```bash
 # Add bridge device
