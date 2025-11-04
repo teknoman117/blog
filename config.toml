@@ -69,10 +69,10 @@ username = "teknoman117"
 github = "teknoman117"
 linkedin = "teknoman117"
 twitter = "teknoman117"
+youtube = "teknoman117"
 other = [
-    { name = "YouTube", font_awesome = "fa-brands fa-youtube", url = "https://youtube.com/@teknoman117" },
-    { name = "Webring-Previous", font_awesome = "fa-solid fa-arrow-left-long", url = "https://ringdt.rapid.workers.dev/prev?from=https://nrlewis.dev" },
-    { name = "Webring-Next", font_awesome = "fa-solid fa-arrow-right-long", url = "https://ringdt.rapid.workers.dev/next?from=https://nrlewis.dev" }
+    { name = "Webring-Previous", font_awesome = "fa-solid fa-arrow-left-long", url = "https://ringdt.rapid.workers.dev/prev?from=https://nrlewis.dev", newtab = false },
+    { name = "Webring-Next", font_awesome = "fa-solid fa-arrow-right-long", url = "https://ringdt.rapid.workers.dev/next?from=https://nrlewis.dev", newtab = false }
 ]
 
 # CDN links
